@@ -1,2 +1,63 @@
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syake Checklist App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Syake Checklist App</h1>
+    <p>旅行・防災・買い物・仕事に使える汎用チェックリスト</p>
+  </header>
+
+  <main class="container">
+    <section class="input-area">
+      <h2>項目を追加</h2>
+
+      <div class="form-row">
+        <input type="text" id="itemName" placeholder="例：モバイルバッテリー">
+        <input type="number" id="itemQty" min="1" value="1">
+        <select id="itemCategory">
+          <option value="旅行">旅行</option>
+          <option value="防災">防災</option>
+          <option value="買い物">買い物</option>
+          <option value="仕事">仕事</option>
+          <option value="その他">その他</option>
+        </select>
+        <button id="addButton">追加</button>
+      </div>
+    </section>
+
+    <section class="control-area">
+      <h2>絞り込み</h2>
+
+      <div class="form-row">
+        <select id="filterCategory">
+          <option value="すべて">すべて</option>
+          <option value="旅行">旅行</option>
+          <option value="防災">防災</option>
+          <option value="買い物">買い物</option>
+          <option value="仕事">仕事</option>
+          <option value="その他">その他</option>
+        </select>
+
+        <button id="exportButton">CSV出力</button>
+        <button id="clearButton" class="danger">全削除</button>
+      </div>
+    </section>
+
+    <section class="list-area">
+      <h2>チェックリスト</h2>
+      <p id="progressText">0 / 0 完了</p>
+      <div id="checklist"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>GitHub Pages Training App / HTML + CSS + JavaScript</p>
+  </footer>
+</body>
+</html>
