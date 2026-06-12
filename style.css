@@ -1,1 +1,153 @@
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #ff8a3d, #ffbd69);
+  color: white;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+  border-left: 6px solid #ff8a3d;
+  padding-left: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input[type="text"] {
+  flex: 2;
+  min-width: 200px;
+}
+
+input[type="number"] {
+  width: 90px;
+}
+
+button {
+  cursor: pointer;
+  background: #ff8a3d;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button.danger {
+  background: #d9534f;
+}
+
+.check-item {
+  display: grid;
+  grid-template-columns: 40px 1fr 80px 100px 80px;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.check-item.done .item-name {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.item-category {
+  font-size: 13px;
+  color: #666;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.delete-button {
+  background: #777;
+  font-size: 14px;
+}
+
+#progressText {
+  font-weight: bold;
+  color: #555;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .check-item {
+    grid-template-columns: 36px 1fr;
+    gap: 8px;
+  }
+
+  .item-category,
+  .delete-button,
+  .qty-display {
+    grid-column: 2;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select,
+  button {
+    width: 100%;
+  }
+}
